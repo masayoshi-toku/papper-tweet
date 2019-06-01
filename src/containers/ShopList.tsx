@@ -1,13 +1,13 @@
 import ShopList from '../components/ShopList'
-import { Shop } from '../services/hotpapper/models'
-import { HotPapperState } from '../reducer'
+import { Shop } from '../services/gurunavi/models'
+import { GurunaviState } from '../reducer'
 import { connect } from 'react-redux';
 
 interface StateProps {
   shops: Shop[]
 }
 
-const mapStateToProps = (state: HotPapperState): StateProps => ({
+const mapStateToProps = (state: GurunaviState): StateProps => ({
   shops: state.shops
 })
 

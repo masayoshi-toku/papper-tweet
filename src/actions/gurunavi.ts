@@ -1,6 +1,6 @@
 import { AxiosError } from 'axios'
-import { Shop } from '../services/hotpapper/models'
-import * as ActionType from './hotpapperConstants'
+import { Shop } from '../services/gurunavi/models'
+import * as ActionType from './gurunaviConstants'
 
 interface GetShopParams {
   shopName: string
@@ -28,7 +28,7 @@ export const getShops = {
   }),
 }
 
-export type HotPapperAction =
+export type GurunaviAction =
   | ReturnType<typeof getShops.start>
   | ReturnType<typeof getShops.succeed>
   | ReturnType<typeof getShops.fail>

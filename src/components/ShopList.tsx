@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { Item } from 'semantic-ui-react'
-import { Shop } from '../services/hotpapper/models'
+import { Shop } from '../services/gurunavi/models'
 
 interface ShopListProps {
   shops: Shop[]
