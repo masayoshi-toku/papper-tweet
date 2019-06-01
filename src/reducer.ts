@@ -1,22 +1,22 @@
 import { Reducer } from 'redux';
 import { AxiosError } from 'axios';
-import { HotPapperAction } from './actions/hotpapper'
-import * as ActionType from './actions/hotpapperConstants'
-import { Shop } from './services/hotpapper/models'
+import { GurunaviAction } from './actions/gurunavi'
+import * as ActionType from './actions/gurunaviConstants'
+import { Shop } from './services/gurunavi/models'
 
-export interface HotPapperState {
+export interface GurunaviState {
   shops: Shop[]
   error?: AxiosError | null
 }
 
-const initialState: HotPapperState = {
+const initialState: GurunaviState = {
   shops: [],
 }
 
-const hotPapperReducer: Reducer<HotPapperState, HotPapperAction> = (
-  state: HotPapperState = initialState,
-  action: HotPapperAction,
-): HotPapperState => {
+const gurunaviReducer: Reducer<GurunaviState, GurunaviAction> = (
+  state: GurunaviState = initialState,
+  action: GurunaviAction,
+): GurunaviState => {
   switch (action.type) {
     case ActionType.GET_SHOPS_START:
       return {
@@ -43,4 +43,4 @@ const hotPapperReducer: Reducer<HotPapperState, HotPapperAction> = (
   }
 }
 
-export default hotPapperReducer
+export default gurunaviReducer

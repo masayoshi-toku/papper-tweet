@@ -14,8 +14,8 @@ const SearchForm: FC<SearchFormProps> = ({
 }) => (
   <>
     <Form size='small'>
-      <Form.Field control='textarea' rows='3' label='テキスト' value={word} onChange={(e: ChangeEvent<HTMLInputElement>) => setWord(e.currentTarget.value)} width={6} />
-      <Button type='submit' onClick={() => getShopsStart(word)}>投稿する</Button>
+      <Form.Input label='キーワード検索' value={word} onChange={(e: ChangeEvent<HTMLInputElement>) => setWord(e.currentTarget.value)} width={4} />
+      <Button type='submit' onClick={() => getShopsStart(word)}>検索</Button>
     </Form>
   </>
 )

@@ -4,8 +4,7 @@ import { Dispatch } from 'redux'
 import { RouteComponentProps, withRouter } from 'react-router'
 
 import SearchForm from '../components/SearchForm'
-import { getShops } from '../actions/hotpapper'
-
+import { getShops } from '../actions/gurunavi'
 
 interface DispatchProps {
   getShopsStart: (shopName: string) => void

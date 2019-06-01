@@ -22,7 +22,7 @@ export const getShopsFactory = (optionConfig?: ApiConfig) => {
   const getShops = async (shopName: string) => {
     try {
       // You should add your own key here
-      const response = await instance.get(`?keyid=&name=${shopName}`)
+      const response = await instance.get(`?keyid=&freeword=${shopName}`)
 
       if (response.status !== 200) {
         throw new Error('Server Error');

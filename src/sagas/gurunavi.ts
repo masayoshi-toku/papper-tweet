@@ -1,8 +1,8 @@
 import { all, call, fork, put, takeLatest } from 'redux-saga/effects';
 
-import * as Action from '../actions/hotpapperConstants';
-import { getShops } from '../actions/hotpapper';
-import { getShopsFactory } from '../services/hotpapper/api';
+import * as Action from '../actions/gurunaviConstants';
+import { getShops } from '../actions/gurunavi';
+import { getShopsFactory } from '../services/gurunavi/api';
 
 function* runGetShops(action: ReturnType<typeof getShops.start>) {
   const { shopName } = action.payload;

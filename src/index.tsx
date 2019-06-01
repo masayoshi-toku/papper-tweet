@@ -6,15 +6,15 @@ import { BrowserRouter } from 'react-router-dom';
 import createSagaMiddleware from 'redux-saga';
 
 import App from './App'
-import hotPapperReducer from './reducer';
-import rootSaga from './sagas/hotpapper';
+import reducer from './reducer';
+import rootSaga from './sagas/gurunavi';
 import * as serviceWorker from './serviceWorker'
 
 import './index.css'
 import './styles/semantic.min.css'
 
 const sagaMiddleware = createSagaMiddleware()
-const store = createStore(hotPapperReducer, applyMiddleware(sagaMiddleware))
+const store = createStore(reducer, applyMiddleware(sagaMiddleware))
 
 ReactDOM.render(
   <Provider store={store}>
