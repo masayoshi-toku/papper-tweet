@@ -19,10 +19,10 @@ export const getShopsFactory = (optionConfig?: ApiConfig) => {
 
   const instance = axios.create(config)
 
-  const getShops = async (shopName: string) => {
+  const getShops = async (word: string) => {
     try {
       // You should add your own key here
-      const response = await instance.get(`?keyid=&freeword=${shopName}`)
+      const response = await instance.get(`?keyid=&freeword=${word}`)
 
       if (response.status !== 200) {
         throw new Error('Server Error');

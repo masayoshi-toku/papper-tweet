@@ -7,15 +7,15 @@ import SearchForm from '../components/SearchForm'
 import { getShops } from '../actions/gurunavi'
 
 interface DispatchProps {
-  getShopsStart: (shopName: string) => void
+  getShopsStart: (word: string) => void
 }
 
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
-  getShopsStart: shopName => dispatch(getShops.start({ shopName })),
+  getShopsStart: word => dispatch(getShops.start({ word })),
 })
 
 type EnhancedSearchFormProps = DispatchProps
-  & RouteComponentProps<{ shopName: string }>
+  & RouteComponentProps<{ word: string }>
 
 const SearchFormContainer: FC<EnhancedSearchFormProps> = ({
   getShopsStart,

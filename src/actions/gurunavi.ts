@@ -3,7 +3,7 @@ import { Shop } from '../services/gurunavi/models'
 import * as ActionType from './gurunaviConstants'
 
 interface GetShopParams {
-  shopName: string
+  word: string
 }
 
 interface GetShopsResult {

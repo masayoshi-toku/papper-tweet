@@ -5,15 +5,15 @@ import { getShops } from '../actions/gurunavi';
 import { getShopsFactory } from '../services/gurunavi/api';
 
 function* runGetShops(action: ReturnType<typeof getShops.start>) {
-  const { shopName } = action.payload;
+  const { word } = action.payload;
 
   try {
     const api = getShopsFactory();
-    const shops = yield call(api, shopName);
+    const shops = yield call(api, word);
 
-    yield put(getShops.succeed({ shopName }, { shops }));
+    yield put(getShops.succeed({ word }, { shops }));
   } catch (error) {
-    yield put(getShops.fail({ shopName }, error));
+    yield put(getShops.fail({ word }, error));
   }
 }
 
