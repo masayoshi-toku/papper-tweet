@@ -13,7 +13,7 @@ const ShopList: FC<ShopListProps> = ({ shops = [] }) => (
         <Item key={index}>
           <Item.Image size='tiny' src={shop.image_url} />
           <Item.Content>
-            <Item.Header as='a' href={shop.url}>{shop.name}</Item.Header>
+            <Item.Header as='a' href={shop.url} target='blank' rel='noopenner'>{shop.name}</Item.Header>
             <Item.Meta>住所：{shop.address}</Item.Meta>
             <Item.Meta>予算：{shop.budget}円</Item.Meta>
           </Item.Content>

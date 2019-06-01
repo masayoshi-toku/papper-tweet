@@ -4,7 +4,7 @@ import { Button, Form } from 'semantic-ui-react'
 interface SearchFormProps {
   word: string
   setWord: Dispatch<SetStateAction<string>>
-  getShopsStart: (shopName: string) => void
+  getShopsStart: (word: string) => void
 }
 
 const SearchForm: FC<SearchFormProps> = ({
