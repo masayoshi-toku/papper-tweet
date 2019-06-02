@@ -29,7 +29,12 @@ export const getShopsFactory = (optionConfig?: ApiConfig) => {
       }
 
       const shops: Shop[] = response.data.rest.map((data: any) => (
-        { name: data.name, budget: data.budget, address: data.address, url: data.url, image_url: data.image_url.shop_image1  }
+        {
+          name: data.name, budget: data.budget, address: data.address,
+          url: data.url, image_url: data.image_url.shop_image1,
+          pr: data.pr.pr_long, opentime: data.opentime, line: data.access.line,
+          station: data.access.station
+        }
       ))
 
       return shops
