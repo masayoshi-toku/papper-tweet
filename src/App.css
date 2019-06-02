@@ -31,3 +31,11 @@
     transform: rotate(360deg);
   }
 }
+
+.shop-info {
+  display: flex;
+}
+
+.top-header {
+  margin-top: 20px !important;
+}

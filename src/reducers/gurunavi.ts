@@ -1,8 +1,9 @@
 import { Reducer } from 'redux';
 import { AxiosError } from 'axios';
-import { GurunaviAction } from './actions/gurunavi'
-import * as ActionType from './actions/gurunaviConstants'
-import { Shop } from './services/gurunavi/models'
+import { GurunaviAction } from '../actions/gurunavi'
+import * as ActionType from '../actions/gurunaviConstants'
+import { Shop } from '../services/gurunavi/models'
+import { ShopState } from './shop'
 
 export interface GurunaviState {
   shops: Shop[]
@@ -11,6 +12,11 @@ export interface GurunaviState {
 
 const initialState: GurunaviState = {
   shops: [],
+}
+
+export interface DefaultState {
+  gurunavi: GurunaviState
+  shop: ShopState
 }
 
 const gurunaviReducer: Reducer<GurunaviState, GurunaviAction> = (

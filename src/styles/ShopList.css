@@ -1,0 +1,11 @@
+.list {
+  flex: 1 1 0;
+}
+
+.item {
+  padding: 10px;
+}
+
+.meta {
+  margin: 10px;
+}
